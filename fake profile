@@ -1,0 +1,12 @@
+app.py
+import streamlit as st
+
+st.title("Fake Account Detector")
+
+url = st.text_input("Enter Profile URL")
+
+if st.button("Check Account"):
+    if "@" in url:
+        st.success("Looks Like Real Account ✅")
+    else:
+        st.error("Suspicious Account ⚠️")
